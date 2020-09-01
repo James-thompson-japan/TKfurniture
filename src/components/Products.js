@@ -7,16 +7,58 @@ import Lamps from './Products/Lamps/Lamps'
 const Products = () => {
 
   const [product, setProduct] = useState("Chairs");
+  const [sofasisselected, setSofasisselected] = useState("border-b border-gray-800");
+  const [chairsisselected, setChairsisselected] = useState("");
+  const [lapsisselected, setLampsisselected] = useState("");
+  const [bedsisselected, setBedsisselected] = useState("");
+
+  const SofasClick = () => {
+    setProduct("Sofas")
+    setSofasisselected("border-b border-gray-800")
+    setBedsisselected("");
+    setChairsisselected("")
+    setLampsisselected("")
+  }
+
+  const BedsClick = () => {
+    setProduct("Beds")
+    setSofasisselected("");
+    setBedsisselected("border-b border-gray-800");
+    setChairsisselected("");
+    setLampsisselected("");
+  }
+
+  const ChairsClick = () => {
+    setProduct("Chairs")
+    setSofasisselected("");
+    setBedsisselected("");
+    setChairsisselected("border-b border-gray-800");
+    setLampsisselected("");
+  }
+
+  const LampsClick = () => {
+    setProduct("Lamps")
+    setSofasisselected("");
+    setBedsisselected("");
+    setChairsisselected("");
+    setLampsisselected("border-b border-gray-800");
+  }
+
+
 
   return (
 
-    <div>
+    <div className = "mb-10">
 
-      <div className="flex mx-auto w-8/12 justify-evenly my-20 text-xl">
-        <div onClick = { () => setProduct("Sofas") } className ="cursor-pointer" >Sofas</div>
-        <div onClick = { () => setProduct("Beds") }  className ="cursor-pointer">Beds</div>
-        <div onClick = { () => setProduct("Chairs") }  className ="cursor-pointer">Chairs</div>
-        <div onClick = { () => setProduct("Lamps") } className ="cursor-pointer">Lamps</div>
+      <div className="flex mx-auto w-8/12 py-5 rounded-2xl shadow-xl justify-evenly my-12 text-sm md:text-lg bg-gray-200 ">
+
+
+        <div onClick = { () =>  SofasClick()} className ={`cursor-pointer ${sofasisselected}`} >Sofas</div>
+        <div onClick = { () => BedsClick() }  className ={`cursor-pointer ${bedsisselected}`} >Beds</div>
+        <div onClick = { () => ChairsClick() }  className ={`cursor-pointer ${chairsisselected}`} >Chairs</div>
+        <div onClick = { () => LampsClick() } className ={`cursor-pointer ${lapsisselected}`} >Lamps</div>
+
+
       </div>
 
     {product === "Sofas" &&  <Sofas/>} 

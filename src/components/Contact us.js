@@ -10,30 +10,30 @@ const Aboutus = () => {
 
           <div className="flex m-5">
               <p>Name: </p>
-              <input name="name" type="text" className="mx-2 border border-gray-300"></input>
+              <input name="name" type="text" className="mx-2 border rounded-lg border-gray-300"></input>
           </div>
 
           <div className="flex m-5">
               <p>Email: </p>
-              <input name="name" type="text" className="mx-2 border border-gray-300"></input>
+              <input name="name" type="text" className="mx-2 border rounded-lg  border-gray-300"></input>
           </div>
 
 
           <div className="flex m-5"><p>Query: </p>
-              <textarea className="mx-2 border border-gray-300 w-10/12 h-20"></textarea>
+              <textarea className="mx-2 border border-gray-300 rounded-lg  w-10/12 h-20"></textarea>
           </div>
 
-          <input onClick={(e) => e.preventDefault()} className="w-3/12 mx-auto p-2 text-xl rounded-full cursor-pointer hover:bg-blue-200" type="submit"/>
+          <input onClick={(e) => e.preventDefault()} className="w-5/12 mx-auto p-2 text-xl rounded-full cursor-pointer hover:bg-blue-200" type="submit"/>
 
       </form>
 
 
 
-      <div className="bg-gray-100 my-20 w-11/12 mx-auto text-center p-10 rounded-xl shadow-2xl flex justify-evenly align-middle flex-col
+      <div className="bg-gray-100 my-20 w-11/12 mx-auto text-center p-10 rounded-xl shadow-2xl flex justify-evenly align-middle flex-col max-w-3xl
       lg:flex-row
       ">
 
-          <div className="flex m-10 items-center justify-center">
+          <div className="flex m-5 items-center justify-center">
             <i className="fas  fa-envelope text-gray-700 px-5 "></i>
             <div>
                 <p>123 Street</p>
@@ -43,12 +43,12 @@ const Aboutus = () => {
             </div>
           </div>
 
-          <div className="flex m-10 items-center justify-center">
+          <div className="flex m-5 items-center justify-center">
             <i className="fas fa-at text-gray-700 px-5"></i>
             <p>TKfurniture@tk.com</p>
           </div>
 
-          <div className="flex m-10 items-center justify-center">
+          <div className="flex m-5 items-center justify-center">
             <i className="fas fa-phone text-gray-700 px-5"></i>
             <p>080 1234 5678</p>
           </div>
